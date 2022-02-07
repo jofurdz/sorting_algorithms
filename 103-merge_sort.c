@@ -50,15 +50,15 @@ void merge(int *array, int low, int middle, int high, int *temp)
  */
 void mergesort(int *array, int low, int high, int *temp)
 {
-    int m;
+	int m;
 
-    if (low < high)
-    {
-        m = ((high + low -1) / 2);
-        mergesort(array, low, m, temp);
-        mergesort(array, m + 1, high, temp);
-        merge(array, low, m, high, temp);
-    }
+	if (low < high)
+	{
+		m = ((high + low -1) / 2);
+		mergesort(array, low, m, temp);
+		mergesort(array, m + 1, high, temp);
+		merge(array, low, m, high, temp);
+	}
 }
 
 /**
@@ -68,13 +68,13 @@ void mergesort(int *array, int low, int high, int *temp)
  */
 void merge_sort(int *array, size_t size)
 {
-    int *widdly;
+	int *widdly;
 
-    if (array == NULL || size < 2)
-        return;
-    widdly = malloc(sizeof(int) * (size + 1));
-    if (widdly == NULL)
-        return;
-    mergesort(array, 0, size - 1, widdly);
-    free(widdly);
+	if (array == NULL || size < 2)
+		return;
+	widdly = malloc(sizeof(int) * (size + 1));
+	if (widdly == NULL)
+		return;
+	mergesort(array, 0, size - 1, widdly);
+	free(widdly);
 }
