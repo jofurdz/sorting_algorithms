@@ -54,7 +54,7 @@ void mergesort(int *array, int low, int high, int *temp)
 
 	if (low < high)
 	{
-		m = ((high + low -1) / 2);
+		m = ((high + low - 1) / 2);
 		mergesort(array, low, m, temp);
 		mergesort(array, m + 1, high, temp);
 		merge(array, low, m, high, temp);
