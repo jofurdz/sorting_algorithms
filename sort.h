@@ -31,6 +31,9 @@ void mergesort(int *array, int low, int high, int *temp);
 void heap_sort(int *array, size_t size);
 void swap(int *a, int *b);
 void heapify(int arr[], int n, int i, int size);
+int getMax(int array[], int n);
+void countingSort(int *array, size_t size, int *buff, int lsd);
+void radix_sort(int *array, size_t size);
 
 
 #endif
