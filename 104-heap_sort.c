@@ -33,6 +33,7 @@ void heapify(int arr[], int n, int i, int size)
 	if (largest != i)
 	{
 		swap(&arr[i], &arr[largest]);
+		print_array(arr, size);
 		heapify(arr, n, largest, size);
 	}
 }
